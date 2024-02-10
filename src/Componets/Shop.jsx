@@ -1,10 +1,9 @@
-import React from 'react'
-import Header from './Header'
+import React from 'react';
+
 
 const Shop = () => {
   return (
     <div>
-        <Header/>
        this is shop
     </div>
   )

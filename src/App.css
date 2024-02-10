@@ -1,4 +1,34 @@
-.container-fluid {
-  display: flex;
-  justify-content: space-around;
+/* hear starts nave-bar decoration */
+@media only screen and (min-width:1000px) {
+  .collapse {
+    margin-left: 50%;
+  }
+
+  .d-flex {
+    margin-right: 40%;
+
+  }
 }
+
+/* nave-bar decaration ends here */
+/* curocle decaration start here */
+#cd_dec {
+  background-color: rgba(136, 172, 172, 0.168);
+  margin-top: -30px;
+  width: 96%;
+
+}
+
+#cd_dec h1 {
+  margin-top: 30%;
+  text-align: left;
+}
+
+#cd_dec p {
+  text-align: left;
+}
+.Cu_btn {
+  border: none;
+
+}
+/* corosel decoration is end  here*/
