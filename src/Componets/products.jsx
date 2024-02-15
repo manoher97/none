@@ -35,30 +35,33 @@ import phone08 from "../Asets/Images/phone-08.png";
 import sofaSlide from "../Asets/Images/hero-img.png";
 import watchSlide from "../Asets/Images/watch-07.png";
 
+import { FaCar, FaCreditCard, FaShieldAlt, FaItunesNote } from "react-icons/fa";
+import { FaRegStar,FaStar,FaStarHalf } from "react-icons/fa";
+
 export const SliderData = [
   {
-      id: 1,
-      title: "50% Off For Your First Shopping",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
-      cover: sofaSlide,
+    id: 1,
+    title: "50% Off For Your First Shopping",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+    cover: sofaSlide,
   },
   {
-      id: 2,
-      title: "50% Off For Your First Shopping",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
-      cover: phone08,
+    id: 2,
+    title: "50% Off For Your First Shopping",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+    cover: phone08,
   },
   {
-      id: 3,
-      title: "50% Off For Your First Shopping",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
-      cover: wireless01,
+    id: 3,
+    title: "50% Off For Your First Shopping",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+    cover: wireless01,
   },
   {
-      id: 4,
-      title: "50% Off For Your First Shopping",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
-      cover: watchSlide,
+    id: 4,
+    title: "50% Off For Your First Shopping",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+    cover: watchSlide,
   },
 ];
 
@@ -66,25 +69,25 @@ export const SliderData = [
 
 export const serviceData = [
   {
-    icon: <ion-icon name="car"></ion-icon>,
+    icon: <FaCar />,
     title: "Free Shipping",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#fdefe6",
   },
   {
-    icon: <ion-icon name="card"></ion-icon>,
+    icon: <FaCreditCard />,
     title: "Safe Payment",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#ceebe9",
   },
   {
-    icon: <ion-icon name="shield-half-outline"></ion-icon>,
+    icon: <FaShieldAlt />,
     title: "Secure Payment",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#e2f2b2",
   },
   {
-    icon: <ion-icon name="headset"></ion-icon>,
+    icon: <FaItunesNote />,
     title: " Back Guarantee",
     subtitle: "Lorem ipsum dolor sit amet.",
     bg: "#d6e5fb",
@@ -98,7 +101,7 @@ export const discoutProducts = [
     imgUrl: productImg01,
     category: "sofa",
     price: 193,
-    discount:30,
+    discount: 30,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -110,6 +113,7 @@ export const discoutProducts = [
       },
     ],
     avgRating: 4.5,
+    avgStare: <FaStar/> ,
   },
   {
     id: "02",
@@ -117,7 +121,7 @@ export const discoutProducts = [
     imgUrl: productImg02,
     category: "sofa",
     price: 253,
-    discount:20,
+    discount: 20,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -140,7 +144,7 @@ export const discoutProducts = [
     imgUrl: productImg08,
     category: "chair",
     price: 89,
-    discount:15,
+    discount: 15,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -163,7 +167,7 @@ export const discoutProducts = [
     imgUrl: productImg09,
     category: "chair",
     price: 112,
-    discount:35,
+    discount: 35,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -186,7 +190,7 @@ export const discoutProducts = [
     imgUrl: phone03,
     category: "mobile",
     price: 599,
-    discount:10,
+    discount: 10,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -209,7 +213,7 @@ export const discoutProducts = [
     imgUrl: phone04,
     category: "mobile",
     price: 799,
-    discount:5,
+    discount: 5,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
