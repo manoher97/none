@@ -159,3 +159,22 @@
   margin-bottom: 5%;
   color: white;
 }
+.Shop_in{
+  padding: 1rem;
+}
+.Shop_in input{
+  width: 80%;
+  height: 40px;
+  margin-top: -10%;
+  border: transparent;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgba(81, 111, 111, 0.179);
+}
+.shop_icon{
+   margin-left: -5%;
+}
+#shop_sec{
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
