@@ -1,20 +1,19 @@
 import React from 'react';
-import { discoutProducts } from './products';
+import { products } from './products';
 import { FaStar } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
 
-const Cart_Discount = () => {
-    return (
-        <div className='discount_dec'>
+const BestSals = () => {
+  return (
+    <div className='discount_dec'>
             <h1>Big Discuont</h1>
             <div className='dic_dec'>
 
                 {
-                    discoutProducts.map(item => (
+                    products.map(item => (
                         <div className="card" id="dicount">
                             <div>
                                 <img src={item.imgUrl} className="card-img-top" alt="..." />
-                                <span>{item.discount}% off</span>
                                 <sup>{item.hurtLike}</sup>
                             </div>
                             <div className="card-body">
@@ -30,7 +29,8 @@ const Cart_Discount = () => {
                 }
             </div>
         </div>
-    )
+  )
 }
 
-export default Cart_Discount
+
+export default BestSals

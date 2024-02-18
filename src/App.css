@@ -1,15 +1,8 @@
 /* hear starts nave-bar decoration */
-@media only screen and (min-width:1000px) {
-  .collapse {
-    margin-left: 50%;
-  }
-
-  .d-flex {
-    margin-right: 40%;
-
-  }
+#nav_dec{
+  position: sticky;
+  top: 0;
 }
-
 /* nave-bar decaration ends here */
 /* curocle decaration start here */
 #cd_dec {
@@ -29,6 +22,10 @@
   background-color: rgba(149, 103, 103, 0.269);
   border: transparent;
 }
+.data img{
+  width: 100%;
+  height: 500px;
+}
 @media only screen and (max-width:400px)  {
   
   .data{
@@ -36,13 +33,6 @@
     grid-template-columns: auto;
     text-align: left;
     margin-left: 10%;
-  }
-  /* .data h1{
-    margin-top: 30%;
-  } */
-  .data button{
-    background-color: rgba(149, 103, 103, 0.269);
-    border: transparent;
   }
 }
 
@@ -67,7 +57,7 @@
 .ofCart h5{
   margin-top: 10%;
 }
-@media only screen and (min-width:400px) and (max-width:800px){
+@media only screen and (min-width:400px) and (max-width:1000px){
   .Offers_dec{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -84,4 +74,88 @@
   }
 }
 /* app advantages decoration ends here */
-
+/* Discount product decoration start here */
+.discount_dec{
+  background-color: rgba(136, 172, 172, 0.168);
+ 
+}
+.discount_dec h1{
+  padding-top: 5%;
+}
+.dic_dec{
+  display: grid;
+  grid-template-columns: repeat(3,1fr); 
+  margin: 5% 10%;
+}
+#dicount{
+  margin: 5% 3%;
+  position: relative;
+  text-align: left;
+}
+#dicount img{
+ width: 100%;
+ height: 300px;
+ 
+}
+#dicount span{
+  position: absolute;
+  margin-left : -95%;
+  margin-top: 5%;
+  border: 1px solid;
+  padding: 0 0.2rem;
+  background-color: rgb(5, 5, 50);
+  color: white;
+  border-radius: 30px;
+}
+#dicount sup{
+  position: absolute;
+  margin-left: -15%;
+  font-size: 3vh;
+  margin-top: 10%;
+  opacity: 0;
+}
+#dicount:hover sup{
+  opacity: 5;
+}
+#dicount p{
+  color: rgba(232, 191, 9, 0.907);
+}
+.dic_btn{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10%;
+  font-size: 4vh;
+}
+.dic_btn button{
+  border-radius: 50%;
+  background-color: white;
+  border: transparent;
+}
+.dic_btn button:hover{
+  background-color: rgba(200, 97, 97, 0.567);
+  color: white;
+}
+@media only screen and (min-width:400px) and (max-width:1000px) {
+  .dic_dec{
+    display: grid;
+    grid-template-columns: auto auto; 
+  }
+  
+}
+@media only screen and (max-width:800px) {
+  .dic_dec{
+    display: grid;
+    grid-template-columns: auto; 
+  }
+  
+}
+/* shop component decoration start here */
+.shop_dec{
+  background-image: url("./Asets/Images/premium.avif");
+  background-repeat: no-repeat;
+  height: 200px;
+  margin-top: -2%;
+  padding: 5% 0;
+  margin-bottom: 5%;
+  color: white;
+}

@@ -36,7 +36,7 @@ import sofaSlide from "../Asets/Images/hero-img.png";
 import watchSlide from "../Asets/Images/watch-07.png";
 
 import { FaCar, FaCreditCard, FaShieldAlt, FaItunesNote } from "react-icons/fa";
-import { FaRegStar,FaStar,FaStarHalf } from "react-icons/fa";
+import { FcLikePlaceholder } from "react-icons/fc";
 
 export const SliderData = [
   {
@@ -64,8 +64,6 @@ export const SliderData = [
     cover: watchSlide,
   },
 ];
-
-
 
 export const serviceData = [
   {
@@ -102,6 +100,7 @@ export const discoutProducts = [
     category: "sofa",
     price: 193,
     discount: 30,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -113,7 +112,6 @@ export const discoutProducts = [
       },
     ],
     avgRating: 4.5,
-    avgStare: <FaStar/> ,
   },
   {
     id: "02",
@@ -122,6 +120,7 @@ export const discoutProducts = [
     category: "sofa",
     price: 253,
     discount: 20,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -145,6 +144,7 @@ export const discoutProducts = [
     category: "chair",
     price: 89,
     discount: 15,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -168,6 +168,7 @@ export const discoutProducts = [
     category: "chair",
     price: 112,
     discount: 35,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -191,6 +192,7 @@ export const discoutProducts = [
     category: "mobile",
     price: 599,
     discount: 10,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -214,6 +216,7 @@ export const discoutProducts = [
     category: "mobile",
     price: 799,
     discount: 5,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -240,6 +243,7 @@ export const products = [
     imgUrl: productImg01,
     category: "sofa",
     price: 193,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -259,6 +263,7 @@ export const products = [
     imgUrl: productImg02,
     category: "sofa",
     price: 253,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -282,6 +287,7 @@ export const products = [
     imgUrl: productImg03,
     category: "sofa",
     price: 173,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -304,6 +310,7 @@ export const products = [
     imgUrl: productImg02,
     category: "sofa",
     price: 253,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -326,6 +333,7 @@ export const products = [
     imgUrl: productImg04,
     category: "sofa",
     price: 163,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -349,6 +357,7 @@ export const products = [
     imgUrl: productImg05,
     category: "sofa",
     price: 163,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -372,6 +381,7 @@ export const products = [
     imgUrl: productImg06,
     category: "sofa",
     price: 163,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -394,6 +404,7 @@ export const products = [
     imgUrl: productImg07,
     category: "chair",
     price: 99,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -417,6 +428,7 @@ export const products = [
     imgUrl: productImg007,
     category: "sofa",
     price: 173,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -440,6 +452,7 @@ export const products = [
     imgUrl: productImg08,
     category: "chair",
     price: 89,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -463,6 +476,7 @@ export const products = [
     imgUrl: productImg09,
     category: "chair",
     price: 112,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -480,34 +494,14 @@ export const products = [
     avgRating: 4.7,
   },
 
-  {
-    id: "10",
-    productName: "Apple iPhone 12 Pro",
-    imgUrl: phone01,
-    category: "mobile",
-    price: 799,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-      {
-        rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-    ],
-    avgRating: 4.8,
-  },
+  
   {
     id: "25",
     productName: "Sakarias Armchair",
     imgUrl: productImg10,
     category: "chair",
     price: 99,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -523,6 +517,31 @@ export const products = [
       },
     ],
     avgRating: 4.7,
+  },
+];
+export const newAravils=[
+  {
+    id: "10",
+    productName: "Apple iPhone 12 Pro",
+    imgUrl: phone01,
+    category: "mobile",
+    price: 799,
+    hurtLike:<FcLikePlaceholder/>,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
   },
   {
     id: "11",
@@ -530,6 +549,7 @@ export const products = [
     imgUrl: phone02,
     category: "mobile",
     price: 799,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -546,13 +566,13 @@ export const products = [
     ],
     avgRating: 4.8,
   },
-
   {
     id: "12",
     productName: "Realme 8",
     imgUrl: phone03,
     category: "mobile",
     price: 599,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -576,6 +596,7 @@ export const products = [
     imgUrl: phone04,
     category: "mobile",
     price: 799,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -599,6 +620,7 @@ export const products = [
     imgUrl: phone05,
     category: "mobile",
     price: 899,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -622,6 +644,7 @@ export const products = [
     imgUrl: phone06,
     category: "mobile",
     price: 699,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -638,105 +661,13 @@ export const products = [
     ],
     avgRating: 4.8,
   },
-
-  {
-    id: "16",
-    productName: "Rolex Watch",
-    imgUrl: watch01,
-    category: "watch",
-    price: 299,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-      {
-        rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-    ],
-    avgRating: 4.8,
-  },
-
-  {
-    id: "17",
-    productName: "Timex Easy Reader Watch",
-    imgUrl: watch02,
-    category: "watch",
-    price: 299,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-      {
-        rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-    ],
-    avgRating: 4.8,
-  },
-
-  {
-    id: "18",
-    productName: "Rolex Watch",
-    imgUrl: watch03,
-    category: "watch",
-    price: 299,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-      {
-        rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-    ],
-    avgRating: 4.8,
-  },
-
-  {
-    id: "19",
-    productName: "Apple Watch",
-    imgUrl: watch04,
-    category: "watch",
-    price: 399,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-      {
-        rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-    ],
-    avgRating: 4.8,
-  },
-
   {
     id: "20",
     productName: "Beat Studio Wireless",
     imgUrl: wireless01,
     category: "wireless",
     price: 199,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -760,6 +691,7 @@ export const products = [
     imgUrl: wireless03,
     category: "wireless",
     price: 199,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -782,6 +714,7 @@ export const products = [
     imgUrl: wireless02,
     category: "wireless",
     price: 169,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -804,6 +737,7 @@ export const products = [
     imgUrl: wireless04,
     category: "wireless",
     price: 139,
+    hurtLike:<FcLikePlaceholder/>,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -822,3 +756,100 @@ export const products = [
   },
 
 ];
+export const Watchas=[
+  {
+    id: "16",
+    productName: "Rolex Watch",
+    imgUrl: watch01,
+    category: "watch",
+    price: 299,
+    hurtLike:<FcLikePlaceholder/>,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+
+  {
+    id: "17",
+    productName: "Timex Easy Reader Watch",
+    imgUrl: watch02,
+    category: "watch",
+    price: 299,
+    hurtLike:<FcLikePlaceholder/>,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+
+  {
+    id: "18",
+    productName: "Rolex Watch",
+    imgUrl: watch03,
+    category: "watch",
+    price: 299,
+    hurtLike:<FcLikePlaceholder/>,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+
+  {
+    id: "19",
+    productName: "Apple Watch",
+    imgUrl: watch04,
+    category: "watch",
+    price: 399,
+    hurtLike:<FcLikePlaceholder/>,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+]
