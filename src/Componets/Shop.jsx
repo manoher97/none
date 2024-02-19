@@ -1,10 +1,10 @@
 import React from 'react';
 import { FaSearch } from "react-icons/fa";
-import Cart_Discount from './Cart_Discount';
 
 
 
 const Shop = () => {
+  
   return (
     <>
       <div className='shop_dec'>
@@ -27,8 +27,8 @@ const Shop = () => {
           <FaSearch className='shop_icon'/>
         </section>
       </div>
+
       <div>
-        <Cart_Discount/>
       </div>
     </>
   )

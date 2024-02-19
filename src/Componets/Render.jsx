@@ -11,13 +11,13 @@ const Render = () => {
   return (
     <div>
       <BrowserRouter>
-      <Header/>
+        <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Shop" element={<Shop />} />
           <Route exact path="/Cart" element={<Cart />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
 
 

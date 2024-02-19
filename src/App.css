@@ -2,6 +2,8 @@
 #nav_dec{
   position: sticky;
   top: 0;
+  z-index: 2;
+  background-color: aliceblue;
 }
 /* nave-bar decaration ends here */
 /* curocle decaration start here */
@@ -77,7 +79,8 @@
 /* Discount product decoration start here */
 .discount_dec{
   background-color: rgba(136, 172, 172, 0.168);
- 
+  /* position: relative;
+ z-index: -1; */
 }
 .discount_dec h1{
   padding-top: 5%;
@@ -155,9 +158,15 @@
   background-repeat: no-repeat;
   height: 200px;
   margin-top: -2%;
-  padding: 5% 0;
+  
   margin-bottom: 5%;
   color: white;
+}
+.shop_dec h1{
+  background-color: black;
+  opacity: 60%;
+  padding: 5% 0;
+  height: 200px;
 }
 .Shop_in{
   padding: 1rem;
