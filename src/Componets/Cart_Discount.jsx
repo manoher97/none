@@ -11,7 +11,7 @@ const Cart_Discount = () => {
 
                 {
                     discoutProducts.map(item => (
-                        <div className="card" id="dicount">
+                        <div key={item.id} className="card" id="dicount">
                             <div>
                                 <img src={item.imgUrl} className="card-img-top" alt="..." />
                                 <span>{item.discount}% off</span>

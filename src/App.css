@@ -118,7 +118,7 @@
   opacity: 0;
 }
 #dicount:hover sup{
-  opacity: 5;
+  opacity: 1.5;
 }
 #dicount p{
   color: rgba(232, 191, 9, 0.907);
@@ -135,7 +135,7 @@
   border: transparent;
 }
 .dic_btn button:hover{
-  background-color: rgba(200, 97, 97, 0.567);
+  background-color: rgba(112, 174, 210, 0.762);
   color: white;
 }
 @media only screen and (min-width:400px) and (max-width:1000px) {

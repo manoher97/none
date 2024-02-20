@@ -8,7 +8,7 @@ function UncontrolledExample() {
             {
                 SliderData.map(item => (
                     <Carousel.Item>
-                        <div className='data'>
+                        <div key={item.id} className='data'>
                             <div>
                                 <h1>{item.title}</h1>
                                 <p>{item.desc}</p>

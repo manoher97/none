@@ -1,15 +1,25 @@
-import { combineReducers, createStore } from "redux";
+import { createStore } from "redux";
 
 
-
-
-
-function SliderProduct(data=[],action){
-    return <></>
-
+let initionlState ={
+    cartList: [],
 }
 
+const CartListStore = (state = initionlState, action) => {
+    switch(action.type){
+        case "ADD":
+            return{...state,cartList:[...state.cartList, action.payload]};
 
-const storeCurocel=createStore(SliderProduct)
+        case "DELETE":
+            return {...state,cartList:[...state.cartList.filter((item)=>item.id!==action.payload)]} 
+        // case "pluss" :
+        //     return{...prev,[itemId]:prev[itemId]+1}   
+        default :
+            return initionlState
+    }
+        
+    
+}
 
-export default storeCurocel;
+const Store= createStore(CartListStore)
+export default Store;

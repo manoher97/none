@@ -11,12 +11,8 @@ import BestSals from './BestSals';
 const Home = () => {
   return (
     <div>
-      <div>
-        <Curocel />
-      </div>
-      <section>
-        <AddOn />
-      </section>
+      <div><Curocel /></div>
+      <section><AddOn /></section>
       <section><Cart_Discount/></section>
       <section><NewProducts/></section>
       <section><BestSals/></section>

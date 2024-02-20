@@ -2,8 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { IoBagSharp, IoCartSharp } from "react-icons/io5";
 import { TbUserFilled } from "react-icons/tb";
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+    const countOf=useSelector(state=>state.cartList);
     return (
         <>
             <div class="shadow mb-5 rounded" id='nav_dec'>
@@ -22,7 +24,7 @@ const Header = () => {
                             </ul>
                             <div className="d-flex" role="search">
                                 <Link className="nav-link  me-3 fs-4 active" to="/Shop"><TbUserFilled /></Link>
-                                <Link className="nav-link fs-4 active" to="/Cart"><IoCartSharp /></Link>
+                                <Link className="nav-link fs-4 active" to="/Cart"><IoCartSharp /><sup>{countOf.length}</sup></Link>
                             </div>
                         </div>
                     </div>
