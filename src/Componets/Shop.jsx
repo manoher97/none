@@ -4,7 +4,7 @@ import { Watchas,  newAravils, products } from './products';
 import { FaStar } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
 import { useDispatch } from 'react-redux';
-import { add } from '../Storage/Action';
+
 
 
 
@@ -20,9 +20,6 @@ const Shop = () => {
   const dispatch = useDispatch();
 
     const addToCart = (item,quantity) => {
-        for (let i = 0; i < quantity; i++) {
-            dispatch(add(item));
-        }
     };
 
   return (
@@ -60,7 +57,7 @@ const Shop = () => {
                 <p className="card-text"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
                 <div className='dic_btn'>
                   <strong>${item.price}</strong>
-                  <button onClick={()=>addToCart(item,1)}><IoMdAdd /></button>
+                  <button onClick={()=>addToCart(item)}><IoMdAdd /></button>
                 </div>
               </div>
             </div>

@@ -5,7 +5,7 @@ import { TbUserFilled } from "react-icons/tb";
 import { useSelector } from 'react-redux';
 
 const Header = () => {
-    const countOf=useSelector(state=>state.cartList);
+    const countOf=useSelector(state=>state.cartCount);
     return (
         <>
             <div class="shadow mb-5 rounded" id='nav_dec'>

@@ -2,16 +2,13 @@ import React from 'react';
 import { newAravils } from './products';
 import { FaStar } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
-import { add } from '../Storage/Action';
 import { useDispatch } from 'react-redux';
 
 const NewProducts = () => {
     const dispatch = useDispatch();
 
-    const addToCart = (item,quantity) => {
-        for (let i = 0; i < quantity; i++) {
-            dispatch(add(item));
-        }
+    const addToCart = (item) => {
+        
     };
  
     return (

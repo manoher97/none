@@ -1,12 +1,23 @@
-export function add(product){
-    return { type:"ADD", payload : product}  
-}
-export function Delete(product){
-    return { type:"DELETE", payload : product}  
-}
-export function remove(product){
-    return { type:"REMOVE", payload : product}  
-}
-export function visite(product){
-    return { type:"VESITE", payload : product}  
-}
+
+export const addToCart = (product) => ({
+    type: 'ADD', payload: product});
+
+export const deleteFromCart = (product) => ({
+    type: 'DELETE', payload: product
+});
+
+export const increaseQuantity = (product) => ({
+    type: 'INCREASE', payload: product
+});
+
+export const decreaseQuantity = (product) => ({
+    type: 'DECREASE',payload: product
+});
+
+export const removeItem = (product) => ({
+    type: 'REMOVE',payload: product
+});
+
+export const visitProduct = (product) => ({
+    type: 'VISIT',payload: product
+});

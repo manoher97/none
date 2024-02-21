@@ -3,20 +3,16 @@ import { discoutProducts } from './products';
 import { FaStar } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
 import { useDispatch } from 'react-redux';
-import { add ,visite} from '../Storage/Action';
 import { useNavigate } from 'react-router-dom';
 
 
 const Cart_Discount = () => {
     const dispatch = useDispatch();
     const navigate=useNavigate()
-    const addToCart = (item,quantity) => {
-        for (let i = 0; i < quantity; i++) {
-            dispatch(add(item));
-        }
+    const addToCart = (item) => {
+        
     };
 const getDetils =(item)=>{
-    dispatch(visite(item))
     navigate("/OneProduct")
 }
     return (
@@ -37,7 +33,7 @@ const getDetils =(item)=>{
                                 <p className="card-text"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></p>
                                 <div className='dic_btn'>
                                     <strong>${item.price}</strong>
-                                    <button onClick={()=>addToCart(item,1)}><IoMdAdd/></button>
+                                    <button onClick={()=>addToCart(item)}><IoMdAdd/></button>
                                 </div>
                             </div>
                         </div>
