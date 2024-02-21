@@ -11,10 +11,9 @@ const NewProducts = () => {
     const addToCart = (item,quantity) => {
         for (let i = 0; i < quantity; i++) {
             dispatch(add(item));
-            // console.log(item);
         }
     };
-
+ 
     return (
         <div>
             <div>
