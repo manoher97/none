@@ -3,24 +3,24 @@ import { FaSearch } from "react-icons/fa";
 import { Watchas,  newAravils, products } from './products';
 import { FaStar } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
-import { useDispatch } from 'react-redux';
-
+import { useDispatch} from 'react-redux';
+import { addToCart } from '../Storage/Action';
 
 
 
 const Shop = () => {
-
   const [isFilterApplied, setIsFilterApplied] = useState(false);
   const [product, setProduct] = useState(products)
+  const dispatch = useDispatch();
 
+    const cartHandler = (item) => {
+          dispatch(addToCart(item));
+    };
   const toggleToProducts = (filter) => {
     setProduct(filter)
     setIsFilterApplied(!isFilterApplied)
   }
-  const dispatch = useDispatch();
-
-    const addToCart = (item,quantity) => {
-    };
+ 
 
   return (
     <>
@@ -57,7 +57,7 @@ const Shop = () => {
                 <p className="card-text"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
                 <div className='dic_btn'>
                   <strong>${item.price}</strong>
-                  <button onClick={()=>addToCart(item)}><IoMdAdd /></button>
+                  <button onClick={()=>cartHandler(item)}><IoMdAdd /></button>
                 </div>
               </div>
             </div>

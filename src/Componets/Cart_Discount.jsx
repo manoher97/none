@@ -1,20 +1,24 @@
-import React from 'react';
+
+ import React from 'react';
 import { discoutProducts } from './products';
 import { FaStar } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
-import { useDispatch } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { addToCart,visitProduct} from '../Storage/Action';
+
 
 
 const Cart_Discount = () => {
     const dispatch = useDispatch();
-    const navigate=useNavigate()
-    const addToCart = (item) => {
-        
+    const navigate = useNavigate()
+    const cartHandler = (item) => {
+            dispatch(addToCart(item));  
     };
-const getDetils =(item)=>{
-    navigate("/OneProduct")
-}
+    const getDetils = (item) => {
+        dispatch(visitProduct(item))
+        navigate("/OneProduct")
+    }
     return (
         <div className='discount_dec'>
             <h1>Big Discuont</h1>
@@ -23,17 +27,17 @@ const getDetils =(item)=>{
                 {
                     discoutProducts.map(item => (
                         <div key={item.id} className="card" id="dicount">
-                            <div onClick={()=>getDetils(item)}>
+                            <div onClick={() => getDetils(item)}>
                                 <img src={item.imgUrl} className="card-img-top" alt="..." />
                                 <span>{item.discount}% off</span>
                                 <sup>{item.hurtLike}</sup>
                             </div>
                             <div className="card-body">
                                 <h5 className="card-title">{item.productName}</h5>
-                                <p className="card-text"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></p>
+                                <p className="card-text"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
                                 <div className='dic_btn'>
                                     <strong>${item.price}</strong>
-                                    <button onClick={()=>addToCart(item)}><IoMdAdd/></button>
+                                    <button onClick={() => cartHandler(item)}><IoMdAdd /></button>
                                 </div>
                             </div>
                         </div>

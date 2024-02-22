@@ -24,7 +24,7 @@ const Header = () => {
                             </ul>
                             <div className="d-flex" role="search">
                                 <Link className="nav-link  me-3 fs-4 active" to="/Shop"><TbUserFilled /></Link>
-                                <Link className="nav-link fs-4 active" to="/Cart"><IoCartSharp /><sup>{countOf.length}</sup></Link>
+                                <Link className="nav-link fs-4 active" to="/Cart"><IoCartSharp /><sup>{countOf}</sup></Link>
                             </div>
                         </div>
                     </div>

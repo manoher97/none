@@ -249,3 +249,27 @@
   background-color: white;
   padding: 10%;
 }
+
+/* singel product detels decaration start here */
+.oneProduct{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  text-align: left;
+  /* margin-top: -10%; */
+}
+.oneProduct img{
+  width: 100%;
+  height: 400px;
+}
+.oneText{
+  margin: 10%;
+}
+.oneText h3{
+  padding: 2% 0;
+}
+.oneText span{
+padding-right: 10% ;
+}
+.oneText strong{
+  padding-right: 10%;
+}

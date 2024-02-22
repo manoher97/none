@@ -3,15 +3,14 @@ import { products } from './products';
 import { FaStar } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
 import { useDispatch } from 'react-redux';
+import { addToCart } from '../Storage/Action';
 
 
 const BestSals = () => {
     const dispatch = useDispatch();
-
-    const addToCart = (item) => {
-        
-        }
-    
+    const cartHandler = (item) => {
+          dispatch(addToCart(item));
+    };
   return (
     <div className='discount_dec'>
             <h1>Big Discuont</h1>
@@ -29,7 +28,7 @@ const BestSals = () => {
                                 <p className="card-text"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></p>
                                 <div className='dic_btn'>
                                     <strong>${item.price}</strong>
-                                    <button onClick={()=>addToCart(item)}><IoMdAdd/></button>
+                                    <button onClick={()=>cartHandler(item)}><IoMdAdd/></button>
                                 </div>
                             </div>
                         </div>

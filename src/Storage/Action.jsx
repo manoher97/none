@@ -13,11 +13,6 @@ export const increaseQuantity = (product) => ({
 export const decreaseQuantity = (product) => ({
     type: 'DECREASE',payload: product
 });
-
-export const removeItem = (product) => ({
-    type: 'REMOVE',payload: product
-});
-
 export const visitProduct = (product) => ({
-    type: 'VISIT',payload: product
+    type: 'VESITE',payload: product
 });
