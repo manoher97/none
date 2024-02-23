@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'react-toastify/dist/ReactToastify.css';
 import { Provider } from 'react-redux';
 import Store from './Storage/Store';
 

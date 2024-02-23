@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { FaStar } from "react-icons/fa";
-import { Link } from 'react-router-dom';
 import { SliderData, Watchas, discoutProducts, newAravils, products } from './products';
 
 const OneProduct = () => {
     const oneData = useSelector(state => state.oneProduct);
-    console.log(oneData);
-    // const relatedProducts = discoutProducts.filter(product => product.id === oneData[0].id);
     const [activeTab, setActiveTab] = useState("description");
 
     const toggleTab = (tab) => {
@@ -31,10 +28,11 @@ const OneProduct = () => {
                                 <span>Category: {item.category}</span>
                             </aside>
                             <p>{item.shortDesc}</p>
+                            <button>Add More</button>
                         </div>
                     </section>
-                    <section>
-                    <div>
+                    <section className='single_dec'>
+                        <div>
                             <button
                                 className={`tab-btn ${activeTab === "description" ? "active" : ""}`}
                                 onClick={() => toggleTab("description")}
@@ -49,12 +47,12 @@ const OneProduct = () => {
                             </button>
                         </div>
                         {activeTab === "description" && <p>{item.description}</p>}
-                        {activeTab === "reviews" && <p>{item.reviews.map(i=>(
-                           <>
-                           <aside>{i.rating}</aside>
-                           <p>{i.text}</p>
-                           </>
-                            
+                        {activeTab === "reviews" && <p>{item.reviews.map(i => (
+                            <>
+                                <aside>{i.rating}</aside>
+                                <p>{i.text}</p>
+                            </>
+
                         ))}</p>}
                     </section>
                 </div>

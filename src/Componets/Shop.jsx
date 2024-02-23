@@ -4,28 +4,46 @@ import { Watchas,  newAravils, products } from './products';
 import { FaStar } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
 import { useDispatch} from 'react-redux';
-import { addToCart } from '../Storage/Action';
-
+import { addToCart, visitProduct } from '../Storage/Action';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Shop = () => {
   const [isFilterApplied, setIsFilterApplied] = useState(false);
   const [product, setProduct] = useState(products)
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
     const cartHandler = (item) => {
           dispatch(addToCart(item));
+          toast.success('product add', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
     };
   const toggleToProducts = (filter) => {
     setProduct(filter)
     setIsFilterApplied(!isFilterApplied)
   }
+  const getDetils = (item) => {
+    dispatch(visitProduct(item))
+    dispatch(addToCart(item));
+    navigate("/OneProduct")
+}
  
 
   return (
     <>
       <div className='shop_dec'>
         <h1>Products</h1>
+        <ToastContainer  />
       </div>
       <div className="btn-group" id='shop_sec'>
         <section>
@@ -48,7 +66,7 @@ const Shop = () => {
         {
           product.map(item => (
             <div className="card" id="dicount">
-              <div>
+              <div onClick={() => getDetils(item)}>
                 <img src={item.imgUrl} className="card-img-top" alt="..." />
                 <sup>{item.hurtLike}</sup>
               </div>

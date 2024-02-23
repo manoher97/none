@@ -6,6 +6,7 @@ import { IoMdAdd } from "react-icons/io";
 import { useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addToCart,visitProduct} from '../Storage/Action';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -13,15 +14,27 @@ const Cart_Discount = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate()
     const cartHandler = (item) => {
-            dispatch(addToCart(item));  
+            dispatch(addToCart(item));
+            toast.success('product add', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });  
     };
     const getDetils = (item) => {
         dispatch(visitProduct(item))
+        dispatch(addToCart(item));
         navigate("/OneProduct")
     }
     return (
         <div className='discount_dec'>
             <h1>Big Discuont</h1>
+            <ToastContainer  />
             <div className='dic_dec'>
 
                 {

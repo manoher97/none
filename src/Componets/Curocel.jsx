@@ -1,8 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { SliderData } from "./products";
-
-
 function UncontrolledExample() {
+    
     return (
         <Carousel id='cd_dec'>
             {

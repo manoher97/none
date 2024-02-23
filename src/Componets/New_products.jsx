@@ -3,22 +3,42 @@ import { newAravils } from './products';
 import { FaStar } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../Storage/Action';
+import { addToCart, visitProduct } from '../Storage/Action';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+
+
 const NewProducts = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate()
     const cartHandler = (item) => {
-        
-          dispatch(addToCart(item));
+        dispatch(addToCart(item));
+        toast.success('product add', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
     };
- 
+    const getDetils = (item) => {
+        dispatch(visitProduct(item))
+        dispatch(addToCart(item));
+        navigate("/OneProduct")
+    }
+
     return (
         <div>
             <div>
                 <h1>New Arrivals</h1>
+                <ToastContainer  />
                 <div className='dic_dec'>
                     {newAravils.map(item => (
-                        <div key={item.id} className="card" id="dicount">
-                            <div>
+                        <div key={item.id} className="card" id="dicount" >
+                            <div onClick={() => getDetils(item)}>
                                 <img src={item.imgUrl} className="card-img-top" alt="..." />
                                 <sup>{item.hurtLike}</sup>
                             </div>
@@ -27,7 +47,7 @@ const NewProducts = () => {
                                 <p className="card-text"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
                                 <div className='dic_btn'>
                                     <strong>${item.price}</strong>
-                                    <button onClick={() => cartHandler(item,1)}><IoMdAdd /></button>
+                                    <button onClick={() => cartHandler(item, 1)}><IoMdAdd /></button>
                                 </div>
                             </div>
                         </div>

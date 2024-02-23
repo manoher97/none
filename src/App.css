@@ -273,3 +273,12 @@ padding-right: 10% ;
 .oneText strong{
   padding-right: 10%;
 }
+.single_dec{
+  text-align: left;
+  margin: 1% 5%;
+}
+.single_dec button{
+ border: none;
+ background: none;
+ margin: 1%;
+}
