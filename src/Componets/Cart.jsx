@@ -33,17 +33,16 @@ const Cart = () => {
             <div>
               <img src={item.imgUrl} alt="..." />
             </div>
-            <div className='d-flex'>
+            <div>
               <section>
+              <button onClick={() => handleDelete(item)} className='cart_btn'>✖️</button>
                 <h3>{item.productName}</h3>
                 <h4> ${item.price}</h4>
                 <p>Quantity: {item.quantity}</p>
-                <p>Total Price: ${calculateTotalPrice(item)}</p>
-              </section>
-              <section className='cart_btn'>
+                {/* <p>Total Price: ${calculateTotalPrice(item)}</p> */}
                 <button onClick={() => handleIncrement(item)}><FaPlus /></button>
                 <button onClick={() => handleDecrement(item)}><FaMinus /></button>
-                <button onClick={() => handleDelete(item)}>✖️</button>
+                
               </section>
             </div>
           </div>

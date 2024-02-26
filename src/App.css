@@ -5,6 +5,9 @@
   z-index: 2;
   background-color: aliceblue;
 }
+#Navebar{
+  margin-left: 50%;
+}
 
 /* nave-bar decaration ends here */
 /* curocle decaration start here */
@@ -240,9 +243,13 @@
 .Cart_dec button{
   background: none;
   border: none;
+
+}
+.cart_btn{
+  margin-left: 80%;
 }
 .Cart_dec h3{
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .cart_price{

@@ -1,15 +1,43 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FaStar } from "react-icons/fa";
-import { SliderData, Watchas, discoutProducts, newAravils, products } from './products';
+import { Watchas, discoutProducts, newAravils, products } from './products';
+import { addToCart, visitProduct } from '../Storage/Action';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import { IoMdAdd } from "react-icons/io";
+
 
 const OneProduct = () => {
     const oneData = useSelector(state => state.oneProduct);
     const [activeTab, setActiveTab] = useState("description");
+    const [product, setProduct] = useState(products)
+    const navigate = useNavigate()
+    const dispatch = useDispatch();
 
+    const cartHandler = (item) => {
+        dispatch(addToCart(item));
+        toast.success('product add', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+  };
     const toggleTab = (tab) => {
         setActiveTab(tab);
     };
+   
+    const getDetils = (item) => {
+        dispatch(visitProduct(item))
+        dispatch(addToCart(item));
+        navigate("/OneProduct")
+    }
+     
     return (
         <>
             {oneData.map(item => (
@@ -57,6 +85,26 @@ const OneProduct = () => {
                     </section>
                 </div>
             ))}
+            <div className='dic_dec'>
+        {
+          product.map(item => (
+            <div className="card" id="dicount">
+              <div onClick={() => getDetils(item)}>
+                <img src={item.imgUrl} className="card-img-top" alt="..." />
+                <sup>{item.hurtLike}</sup>
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">{item.productName}</h5>
+                <p className="card-text"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
+                <div className='dic_btn'>
+                  <strong>${item.price}</strong>
+                  <button onClick={()=>cartHandler(item)}><IoMdAdd /></button>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
         </>
     );
 };

@@ -38,7 +38,6 @@ const Shop = () => {
     navigate("/OneProduct")
 }
  
-
   return (
     <>
       <div className='shop_dec'>
@@ -53,6 +52,7 @@ const Shop = () => {
           <ul className="dropdown-menu">
             <li><a className="dropdown-item" onClick={() => toggleToProducts(products)} >Chair</a></li>
             <li><a className="dropdown-item" onClick={() => toggleToProducts(newAravils.slice(6, 10))} >Wireless</a></li>
+            <li><a className="dropdown-item" onClick={() => toggleToProducts(newAravils.slice(0, 6))} >Mobiles</a></li>
             <li><a className="dropdown-item" onClick={() => toggleToProducts(Watchas)} >watch</a></li>
           </ul>
         </section>
