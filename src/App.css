@@ -8,6 +8,10 @@
 #Navebar{
   margin-left: 50%;
 }
+.Heder_dec{
+  margin-left: 20%;
+  display: flex;
+}
 
 /* nave-bar decaration ends here */
 /* curocle decaration start here */
@@ -288,4 +292,8 @@ padding-right: 10% ;
  border: none;
  background: none;
  margin: 1%;
+}
+/* footer decoration start here */
+.Bottum_dec{
+  background-color: rgba(123, 123, 192, 0.588);
 }
